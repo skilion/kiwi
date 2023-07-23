@@ -53,6 +53,9 @@ function validateNewMessage(newMessage: NewMessage) {
     if (typeof newMessage.Text !== 'string') {
         throw new Error('Text is missing')
     }
+    if (newMessage.Text.length > 128) {
+        throw new Error('Text must be shorter than 128 characters')
+    }
 }
 
 async function putMessageInDynamoDb(newMessage: NewMessage): Promise<Message> {

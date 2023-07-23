@@ -10,6 +10,7 @@ export class FrontendStack extends cdk.Stack {
     super(scope, id, props);
 
     const frontendBucket = new s3.Bucket(this, 'Frontend', {
+      bucketName: 'kiwi.aradaelli.com',
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ACLS,
       accessControl: s3.BucketAccessControl.BUCKET_OWNER_FULL_CONTROL,
       publicReadAccess: true,      
