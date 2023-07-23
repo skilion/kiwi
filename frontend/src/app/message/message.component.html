@@ -1,0 +1,11 @@
+<div class="card nomargin">
+  <div class="card-block">
+    <div class="card-media-block">
+      <img [src]="avatarUrl" class="card-media-image" />
+      <div class="card-media-description">
+          <span class="card-media-title"><b>{{message?.Author}}</b>  {{message?.CreatedAt | date : 'medium'}}</span>
+          <span class="card-media-text">{{message?.Text}}</span>
+      </div>
+    </div>
+  </div>
+</div>

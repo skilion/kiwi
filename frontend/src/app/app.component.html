@@ -1,0 +1,21 @@
+<div class="main-container">
+  <header class="header-6">
+    <div class="branding">
+      <a class="title" routerLink="/">
+        <img class="clr-icon" src="assets/logo.svg"/>
+        Twitter Demo
+      </a>
+    </div>
+    <div class="header-nav">
+      <a routerLink="/home" routerLinkActive="active"  class="nav-link nav-text">Home</a>
+      <a routerLink="/message-feed" routerLinkActive="active"  class="nav-link nav-text">Live Feed</a>
+      <a routerLink="/new-message" routerLinkActive="active" class="nav-link nav-text">New Message</a>
+    </div>
+  </header>
+
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

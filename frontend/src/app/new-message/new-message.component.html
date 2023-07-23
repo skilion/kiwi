@@ -1,0 +1,14 @@
+<h1>New Message</h1>
+<p>Post a new message.</p>
+<form clrForm [formGroup]="messageForm" clrLayout="vertical">
+  <clr-input-container>
+    <label>Author name:</label>
+    <input clrInput type="text" formControlName="author" />
+  </clr-input-container>
+  <clr-textarea-container>
+    <label>Message:</label>
+    <textarea clrTextarea class="message-textarea" formControlName="message" placeholder="Your message here..."></textarea>
+    <clr-control-error>You must enter a non-empty message</clr-control-error>
+  </clr-textarea-container>
+</form>
+<button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
